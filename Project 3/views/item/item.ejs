@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.title %> - Production Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/items_style.css">
+    <link rel="stylesheet" href="/css/item_style.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <h1>ITEM DETAILS.</h1>
+        <div class="item-list">
+            <div class="item-card">
+                <a href="/items/<%= item.id %>" class="item-link">
+                    <img src="<%= item.image %>" alt="<%= item.title %>" class="item-image">
+                </a>
+                <h3 class="item-title"><%= item.title %></h3>
+                <p class="item-condition">Condition: <%= item.condition %></p>
+                <div class="item-price-offers">
+                    <p class="item-price">Price: $<%= item.price ? item.price.toFixed(2) : '0.00' %></p>
+                    <p class="item-offers">Offers: <%= item.offers || 0 %></p>
+                </div>
+                <p class="item-description"><%= item.details || 'No description available.' %></p>
+                <!-- Edit and Delete Buttons -->
+                <div class="item-actions">
+                    <form>
+                        <button type = "submit" formmethod = "GET" formaction = "/items/<%= item.id%>/edit" class="action-button">Edit</button>
+                        <button type = "submit" formmethod = "POST" formaction = "/items/<%= item.id%>?_method=DELETE" class="action-button">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
