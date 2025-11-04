@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Production Marketplace</title>
+    <link rel="stylesheet" href="/css/login_signup_profile.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main class="profile-container">
+        <!-- Profile image placeholder -->
+        <img src="/images/users/default-image-users.jpg" alt="Profile Image" class="profile-image">
+        
+        <div class="profile-details">
+            <h2>Welcome, <%= user.firstName %> <%= user.lastName %></h2>
+            <p>Email: <%= user.email %></p>
+        </div>
+        
+        <!-- <button class="edit-profile-button">Edit Profile</button> -->
+        <button class="edit-profile-button" onclick="window.location.href='/items/new'">Create New Item</button>
+
+        <!-- User Items Section -->
+        <h3>My Listings</h3>
+        <% if (items.length) { %>
+            <table class="items-list">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% items.forEach(item => { %>
+                        <tr>
+                            <td><a href="/items/<%= item._id %>"><%= item.title %></a></td>
+                            <td><%= item.active === true ? 'Active' : 'No status' %></td>
+                            <td class="item-actions">
+                                <!-- Edit Button -->
+                                <form method="GET" action="/items/<%= item._id %>/edit" style="display:inline;">
+                                    <button type="submit" class="edit-button">Edit</button>
+                                </form>
+                                
+                                <!-- Delete Button -->
+                                <form method="POST" action="/items/<%= item._id %>?_method=DELETE" style="display:inline;">
+                                    <button type="submit" class="delete-button">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>You have not created any items.</p>
+        <% } %>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
