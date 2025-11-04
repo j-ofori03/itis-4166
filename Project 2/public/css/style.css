@@ -1,0 +1,215 @@
+/* Main style sheet */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    color: #333;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+header .logo {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+header .logo img {
+    max-height: 50px; /* logo height */
+    width: auto; 
+    vertical-align: middle; 
+}
+
+
+header .search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 20px;
+    margin-left: auto;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 200px; /* Consider using a percentage for responsiveness */
+    padding: 10px;
+    border: 1px solid #2f2f2f;
+    border-radius: 20px;
+    padding-left: 40px; /* Space for the icon */
+    transition: width 0.3s ease; /* Optional for effects */
+}
+
+/* Search Button */
+.search-button {
+    background: none;
+    border: none;
+    transform: translateY(25%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    /* position: absolute; */
+    /* scale: 10%; */
+    align-items: center;
+    left: 10px;
+    width: 24px; 
+    height: 24px;
+    /* pointer-events: none; clicking through the icon */
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    /* background: #555; */
+    color:#999;
+}
+
+.current-page {
+    color: #007bff;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+/* main h1, h2 {
+    color: #82c3aa
+} */
+
+/* Featured Container */
+.featured {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; /* space between the images */
+    margin-top: 20px; /* space above the featured container */
+    /* border: 1px solid #2f2f2f; */
+}
+
+.featured-image-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 50%;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.browse-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.browse-button:hover {
+    /* background: #333; */
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+}
+
+/* Cinemagraph Styling */
+.cinemagraph {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+/* Footer Styling */
+footer {
+    /* background: #222; */
+    color: black;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #999;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 10px; 
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto; 
+    transition: transform 0.3s ease; /* smooth transition on hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.05); /* slightly enlarges the icon on hover */
+}

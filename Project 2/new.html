@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Marketplace - New Item</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sell_style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <!-- My Marketplace -->
+            <img src="images/wave-creations-logo.png" alt="Wave Creations Logo" />
+        </a>
+        <!-- <input type="text" class="search-bar" placeholder="Search..."> -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <img src="images/icons/search_icon.png" alt="Search Icon" class="search-icon">
+        </div>
+        <nav>
+            <a href="items.html">Browse</a>
+            <a href="new.html" class = "current-page">Sell</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <h2>Sell your gear</h2> -->
+    <h1>SELL.</h1>
+    <p>Find the best suitors for your gear and hardware.</p>
+        
+    <div class="content-container">
+        <img src="images/gifs/rotary-gear.gif" alt="rotary-gear" class="featured-sell-image-container">  
+        <div class="form-container">
+            <form action="#">
+                <label for="condition">Condition:</label>
+                <select id="condition" name="condition" required>
+                    <option value="" disable selected>Select condition</option>
+                    <option value="new">New</option>
+                    <option value="like-new">Like New</option>
+                    <option value="used">Used</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required minlength="3" maxlength="50">
+
+                <label for="seller">Seller:</label>
+                <input type="text" id="seller" name="seller" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required min="1" step = "0.01">
+
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" required></textarea>
+
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" required>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wave Creations</p>
+        <div class="social-icons">
+            <a href="https://x.com/" target="_blank">
+                <img src="images/icons/x-social-logo.png" alt="X Social Logo" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="images/icons/facebook-black-white-icon.png" alt="Facebook Logo" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="images/icons/instagram-logo-white-background.png" alt="Instagram Logo" />
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

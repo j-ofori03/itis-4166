@@ -1,0 +1,90 @@
+main {
+    padding: 20px;
+    padding-left: 30px;
+}
+
+main > div {
+    margin-bottom: 10px;
+}
+
+/* Main Content Styling */
+.content-container {
+    display: flex;
+    gap: 20px; 
+    align-items: flex-start; 
+    margin: 20px 0; 
+}
+
+.featured-sell-image-container {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+.form-container {
+    height: auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* specific styles for sell item form */
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.sell-form label {
+    font-weight: bold;
+}
+
+/* specific styles for sell item page */
+form.sell-form input, 
+form.sell-form select, 
+form.sell-form textarea {
+    margin-bottom: 15px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* specific styles for inputs in sell-form */
+.sell-form input[type="text"],
+.sell-form input[type="number"],
+.sell-form input[type="url"],
+.sell-form select,
+.sell-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+
+
+form textarea {
+    resize: vertical; 
+    min-height: 100px; 
+    max-height: 200px;
+    overflow: auto; 
+}
+
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
