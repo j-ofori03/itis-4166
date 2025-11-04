@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Production Marketplace</title>
+    <link rel="stylesheet" href="/css/login_signup_profile.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main class="auth-container">
+        <div class="auth-header">
+            <h1>Log In</h1>
+        </div>
+        <form action="/users/login" method="POST" class="auth-form">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="auth-button">Log In</button>
+        </form>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

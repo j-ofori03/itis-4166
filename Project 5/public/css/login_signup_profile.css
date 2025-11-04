@@ -1,0 +1,200 @@
+/* General Container for Login/Signup/Profile */
+.auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for Form Titles (Login, Signup) */
+.auth-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields */
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="url"],
+.auth-form select,
+.auth-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border: 1px solid #333;
+}
+
+/* Action Buttons (Login, Signup, Profile Update) */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: #555;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Details */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    max-width: 400px;
+}
+
+.profile-details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Edit Profile Button */
+.edit-profile-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.edit-profile-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Listing Styles */
+.items-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-list th, .items-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button, .delete-button, .view-offers-button {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.items-list td strong {
+    font-weight: bold;
+}
+
+.items-list td a { 
+    text-decoration: none;
+    color: #004997;
+}
+
+.view-offers-button {
+    background-color: #35dc67;
+}
+
+.view-offers-button:hover {
+    background-color: #23c886;
+}
+
+/* Item Link Styling */
+.item-link {
+    text-decoration: none;
+    color: #004997;
+    font-size: 12px; 
+    display: block; 
+    max-width: 250px; 
+    white-space: wrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.item-link {
+    padding: 5px;
+}

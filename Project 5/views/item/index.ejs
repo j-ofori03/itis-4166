@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Marketplace - Items</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/items_style.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <h1>ITEMS.</h1>
+        <p>Browse our curated list of products.</p>
+        <div class="item-list">
+            <% if (items.length > 0) { %>
+                <% items.forEach(item => { %>
+                    <div class="item-card">
+                        <a href="/items/<%= item.id %>" class="item-link">
+                            <img src="<%= item.image %>" alt="<%= item.title %>" class="item-image">
+                        </a>
+                        <h3 class="item-title"><%= item.title %></h3>
+                        <p class="item-condition">Condition: <%= item.condition %></p>
+                        <div class="item-price-offers">
+                            <!-- Check if price is valid before calling toFixed(2) -->
+                            <p class="item-price">Price: $<%= item.price ? item.price.toFixed(2) : '0.00' %></p>
+                            <p class="item-offers">Offers: <%= item.totalOffers || 'NA' %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No items available at the moment. Please check back later.</p>
+            <% } %>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - Production Marketplace</title>
+    <link rel="stylesheet" href="/css/login_signup_profile.css">
+    <link rel="stylesheet" href="/css/offers_style.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main class="offers-container">
+        <h2>Offers for <%= item.title %></h2>
+
+        <% if (offers.length) { %>
+            <table class="offers-list">
+                <thead>
+                    <tr>
+                        <th>Buyer</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% offers.forEach(offer => { %>
+                        <tr>
+                            <td><%= offer.user.firstName %> <%= offer.user.lastName %></td>
+                            <td>$<%= offer.amount %></td>
+                            <td><%= offer.status %></td>
+                            <td class="offer-actions">
+                                <!-- Accept Button -->
+                                <% if (offer.status === 'pending') { %>
+                                    <form method="POST" action="/items/<%= item._id %>/offers/<%= offer._id %>/accept" style="display:inline;">
+                                        <button type="submit" class="accept-button">Accept</button>
+                                    </form>
+                                <% } else { %>
+                                    <button type="button" disabled class="closed-button">Offer Closed</button>
+                                <% } %>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+
+            <!-- Back to Profile -->
+            <button class="action-button" onclick="window.location.href='/users/profile'">Back to Profile</button>
+
+        <% } else { %>
+            <p>You have no offers at the moment.</p>
+            <button class="action-button" onclick="window.location.href='/users/profile'">Back to Profile</button>
+        <% } %>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

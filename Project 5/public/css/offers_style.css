@@ -1,0 +1,112 @@
+/* General Container for Offers Page */
+.offers-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Offer Listing Styles */
+.offers-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.offers-list th, .offers-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.offer-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.offers-list td strong {
+    font-weight: bold;
+}
+
+.offers-list td a { 
+    text-decoration: none;
+    color: #004997;
+}
+
+.accept-button {
+    background-color: transparent;
+    /* color: #333;  */
+    color: white;
+    background-color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 5px; 
+    padding: 7px 12px;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.accept-button:hover {
+    color: #007BFF;
+    background-color: white;
+}
+
+.reject-button {
+    background-color: transparent;
+    /* color: #333;  */
+    color: #007BFF;
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 5px; 
+    padding: 7px 12px;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.accept-button:hover {
+    color: white;
+    background-color: #007BFF;
+}
+
+.action-button {
+    background-color: transparent;
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    margin-top: 10px;
+    padding: 7px 12px;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.action-button:hover {
+    background-color: #333; 
+    color: #fff; 
+}
+
+.closed-button {
+    background-color: transparent;
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.closed-button:hover {
+    background-color: #333; 
+    color: #fff; 
+}

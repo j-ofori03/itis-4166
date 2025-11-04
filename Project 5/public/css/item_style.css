@@ -1,0 +1,199 @@
+main {
+    padding: 20px;
+    padding-left: 40px;
+}
+
+/* INDIVIDUAL CARD DETAIL */
+.item-detail-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    gap: 20px
+}
+.item-detail {
+    width: 350px; 
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* DETAIL CONTAINER */
+.details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 700px;
+    font-size: 14px;
+}
+
+.details h2 {
+    margin-bottom: 10px; 
+}
+
+.details p {
+    margin: 5px 0; 
+}
+
+.details .action-button {
+    display: inline-block;
+    margin-right: 10px; 
+    margin-top: 10px; 
+}
+
+.details .description {
+    margin-top: 20px; 
+    border-top: 1px solid #ccc; 
+    padding-top: 10px; 
+    font-size: 13px;
+    color: #666; 
+}
+
+.item-description {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.action-button {
+    background-color: transparent;
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    padding: 7px 12px;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.action-button:hover {
+    background-color: #333; 
+    color: #fff; 
+}
+
+/* EDIT FORM */
+
+.edit-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 20px; 
+    max-width: 800px; 
+    /* margin: 0 auto; Center the form */
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+}
+
+.edit-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    gap: 20px;
+}
+
+.edit-form {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-preview {
+    flex-shrink: 0;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 8px; 
+    font-weight: bold; 
+}
+
+
+/* specific styles for inputs in edit-form */
+.edit-form input[type="text"],
+.edit-form input[type="number"],
+.edit-form input[type="url"],
+.edit-form select,
+.edit-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+
+.submit-button {
+    grid-column: span 2; 
+    padding: 12px 12px; 
+    background-color: transparent; 
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+.submit-button:hover {
+    background-color: #333; 
+    color: #fff; 
+}
+
+/* Form container styling to display elements side by side */
+.offer-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 10px;
+    width: 160%; 
+}
+
+/* Input styling for offer form */
+.item-card form input[type="number"] {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    /* margin-bottom: 10px;  */
+    box-sizing: border-box; 
+}
+
+.item-highest-offer {
+    font-size: 14px;
+    color: #be3f3f;
+    text-align: left;
+    margin-top: 5%;
+}
+
+
+
